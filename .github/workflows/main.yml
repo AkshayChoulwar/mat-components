@@ -4,29 +4,10 @@ jobs:
   build:
     name: Build, lint, and test on Node ${{ matrix.node }} and ${{ matrix.os }}
 
-    runs-on: ${{ matrix.os }}
-    strategy:
-      matrix:
-        node: ['10.x', '12.x', '14.x']
-        os: [ubuntu-latest, windows-latest, macOS-latest]
-
-    steps:
-      - name: Checkout repo
-        uses: actions/checkout@v2
-
-      - name: Use Node ${{ matrix.node }}
-        uses: actions/setup-node@v1
-        with:
-          node-version: ${{ matrix.node }}
-
-      - name: Install node packages.
-        run: npm install
-
-      - name: Linting
-        run: npm run lint
-
-      - name: Test
-        run: npm run test
-
-      - name: Build
-        run: npm run build
+  steps:
+    - uses: actions/checkout@v2
+    - uses: actions/setup-node@v2
+      with:
+        node-version: '14'
+    - run: npm install
+    - run: npm test
