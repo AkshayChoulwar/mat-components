@@ -1,6 +1,6 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
-import { Button } from '../src/Button';
+import { Button } from '../src';
 
 describe('Testing the new created button', () => {
   it('render the text button with the title', () => {
