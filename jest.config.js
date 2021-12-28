@@ -1,5 +1,5 @@
 module.exports = {
-    roots: ["<rootDir>"],
+    roots: ["<rootDir>/src"],
     // Jest transformations -- this adds support for TypeScript
     // using ts-jest
     transform: {
