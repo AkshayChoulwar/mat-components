@@ -18,7 +18,7 @@
     "test:coverage": "jest --coverage",
     "lint": "tsdx lint",
     "lint:fix": "tsdx lint --fix",
-    "prepare": "tsdx build",
+    "prepare": "husky install",
     "size": "size-limit",
     "analyze": "size-limit --why",
     "storybook": "start-storybook -p 6006",
@@ -26,11 +26,6 @@
   },
   "peerDependencies": {
     "react": ">=16"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "tsdx lint"
-    }
   },
   "prettier": {
     "printWidth": 80,
